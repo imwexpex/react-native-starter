@@ -1,1 +1,4 @@
-##### **RNStarter repo for bootstrapping RN projects WIP**
+RNStarter repo for bootstrapping RN projects
+=
+WIP
+=
