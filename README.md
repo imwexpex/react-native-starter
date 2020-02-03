@@ -1,6 +1,6 @@
 WIP
 =
-RNStarter repo for bootstrapping RN projects
+react-native-starter repo for bootstrapping RN projects
 =
 
 **Current list of used libs:** 
