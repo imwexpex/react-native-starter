@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dtp-p8-LvN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Fnd-62-7zz">
+            <objects>
+                <viewController id="Dtp-p8-LvN" sceneMemberID="viewController">
+                    <view key="view" autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" id="guO-oA-Nhw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="RNStarter" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kuT-d7-ir6">
+                                <rect key="frame" x="87" y="422" width="240" height="52"/>
+                                <color key="backgroundColor" red="0.078432209789999999" green="0.078429825600000003" blue="0.078431464729999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.078432209789999999" green="0.078429825600000003" blue="0.078431464729999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="kuT-d7-ir6" firstAttribute="top" secondItem="m9o-hn-KQd" secondAttribute="top" constant="340" id="FCs-65-yGz"/>
+                            <constraint firstItem="m9o-hn-KQd" firstAttribute="bottom" secondItem="kuT-d7-ir6" secondAttribute="bottom" constant="350" id="aqi-TD-Fv5"/>
+                            <constraint firstItem="m9o-hn-KQd" firstAttribute="trailing" secondItem="kuT-d7-ir6" secondAttribute="trailing" constant="87" id="cxY-rs-6C9"/>
+                            <constraint firstItem="kuT-d7-ir6" firstAttribute="leading" secondItem="m9o-hn-KQd" secondAttribute="leading" constant="87" id="kvC-Z2-Yeb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="m9o-hn-KQd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lvb-Jr-bCV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
