@@ -76,7 +76,7 @@ import com.android.build.OutputFile
  */
 
 project.ext.react = [
-    enableHermes: false,  // clean and rebuild if changing
+    enableHermes: true,  // clean and rebuild if changing
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
@@ -162,12 +162,6 @@ android {
         }
     }
 
-    packagingOptions {
-            pickFirst "lib/armeabi-v7a/libc++_shared.so"
-            pickFirst "lib/arm64-v8a/libc++_shared.so"
-            pickFirst "lib/x86/libc++_shared.so"
-            pickFirst "lib/x86_64/libc++_shared.so"
-        }
 
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
@@ -201,6 +195,7 @@ dependencies {
     }
     debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.flipper'
+        exclude group:'com.squareup.okhttp3', module:'okhttp'
     }
     debugImplementation("com.facebook.flipper:flipper-fresco-plugin:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.flipper'
