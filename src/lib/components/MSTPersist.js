@@ -1,6 +1,5 @@
 import {rootStore} from '@lib/store/configureStore';
 import AsyncStorage from '@react-native-community/async-storage';
-import colors from '@theme/colors';
 import {persist} from '@utils/persist';
 import {observer} from 'mobx-react-lite';
 import PropTypes from 'prop-types';
@@ -30,7 +29,6 @@ const MSTPersist = observer(({children}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.APP_BG,
   },
 });
 
