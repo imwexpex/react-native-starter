@@ -7,6 +7,7 @@ module.exports = {
       {
         alias: {
           '@src': './src',
+          '@lib': './src/lib',
           '@screens': './src/screens',
           '@constants': './src/lib/constants',
           '@theme': './src/res/theme',
