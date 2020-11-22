@@ -6,7 +6,7 @@ import MSTPersist from '@components/MSTPersist';
 
 const App = () => {
   useEffect(() => {
-    RNBootSplash.hide({duration: 250});
+    RNBootSplash.hide({fade: true});
   }, []);
 
   return (
