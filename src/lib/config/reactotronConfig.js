@@ -1,8 +1,12 @@
 import AsyncStorage from '@react-native-community/async-storage';
+import {NativeModules} from 'react-native';
 import {mst} from 'reactotron-mst';
 import Reactotron from 'reactotron-react-native';
 
-const reactotron = Reactotron.configure({name: 'AppName'})
+const reactotron = Reactotron.configure({
+  name: 'app',
+  host: NativeModules.SourceCode.scriptURL.split('://')[1].split(':')[0],
+})
   .setAsyncStorageHandler(AsyncStorage)
   .useReactNative()
   .use(mst())
