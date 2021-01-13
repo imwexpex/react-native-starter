@@ -21,15 +21,15 @@ function getData({someData}) {
   };
 }
 
-const Place = types.model(
-  {
+const Place = types
+  .model({
     data: types.maybe(types.frozen()),
     getData: asyncAction(getData),
-  }.actions((store) => ({
+  })
+  .actions((store) => ({
     setData(data) {
       store.data = data;
     },
-  })),
-);
+  }));
 
 export default Place;
