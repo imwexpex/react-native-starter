@@ -23,7 +23,7 @@
     "hermes-engine": "0.5.2-rc1",
     "mobx": "^6.0.4",
     "mobx-react-lite": "^3.1.6",
-    "mobx-state-tree": "^4.0.2",
+    "mobx-state-tree": "^5.0.0",
     "react": "16.13.1",
     "react-native": "^0.63.4",
     "react-native-bootsplash": "^3.1.2",
