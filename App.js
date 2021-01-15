@@ -1,9 +1,9 @@
+import MainNavigator from '@navigation/MainNavigator';
 import React, {useEffect} from 'react';
-import {View} from 'react-native';
 import RNBootSplash from 'react-native-bootsplash';
-import {MSTProvider, rootStore} from './src/lib/store/configureStore';
+import {MSTProvider, rootStore} from '@lib/store/configureStore';
 import MSTPersist from '@components/MSTPersist';
-import {locale} from './src/res/strings/locale';
+import {locale} from '@res/strings/locale';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
   return (
     <MSTProvider value={rootStore}>
       <MSTPersist>
-        <View />
+        <MainNavigator />
       </MSTPersist>
     </MSTProvider>
   );

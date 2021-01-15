@@ -21,6 +21,7 @@ module.exports = {
           '@actions': './src/store/actions',
           '@utils': './src/lib/utils',
           '@api': './src/lib/api',
+          '@services': './src/lib/services',
         },
       },
     ],
