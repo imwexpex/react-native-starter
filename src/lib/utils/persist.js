@@ -117,9 +117,11 @@ var persist = function persist(name, store, options) {
       }
     });
 
-    var data = !jsonify ? snapshot : JSON.stringify(snapshot);
+    if (Object.keys(snapshot).length) {
+      var data = !jsonify ? snapshot : JSON.stringify(snapshot);
 
-    storage.setItem(name, data);
+      storage.setItem(name, data);
+    }
   });
   return storage.getItem(name).then(function (data) {
     var snapshot = !isString(data) ? data : JSON.parse(data); // don't apply falsey (which will error), leave store in initial state
