@@ -4,7 +4,7 @@ import {observer} from 'mobx-react-lite';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const MSTPersist = observer(({children}) => {
   const [rehydrated, setRehydrated] = useState(false);
