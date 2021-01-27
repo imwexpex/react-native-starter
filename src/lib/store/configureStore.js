@@ -1,6 +1,7 @@
 import {types} from 'mobx-state-tree';
 import {createContext, useContext} from 'react';
 import Example, {ExampleState} from '@lib/store/ExampleStore';
+import {Platform} from 'react-native';
 
 const RootStore = types
   .model({
@@ -24,7 +25,7 @@ export function useStore() {
   return mstStore;
 }
 
-if (__DEV__) {
+if (__DEV__ && Platform.OS === 'ios') {
   const {connectReduxDevtools} = require('mst-middlewares');
   const remotedev = require('remotedev');
 
