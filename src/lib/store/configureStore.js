@@ -23,3 +23,10 @@ export function useStore() {
   }
   return mstStore;
 }
+
+if (__DEV__) {
+  const {connectReduxDevtools} = require('mst-middlewares');
+  const remotedev = require('remotedev');
+
+  connectReduxDevtools(remotedev, rootStore);
+}
