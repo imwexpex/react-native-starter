@@ -1,21 +1,13 @@
 import {Platform, StatusBar, Dimensions} from 'react-native';
-import {isIphoneX} from 'react-native-iphone-x-helper';
 
-const {height, width} = Dimensions.get('window');
-const standardLength = width > height ? width : height;
-const offset =
-  width > height ? 0 : Platform.OS === 'ios' ? 78 : StatusBar.currentHeight; // iPhone X style SafeAreaView size in portrait
+const {width, height} = Dimensions.get('window');
 
-const deviceHeight =
-  isIphoneX() || Platform.OS === 'android'
-    ? standardLength - offset
-    : standardLength;
-
-const standardScreenHeight = 680;
+const DEVICE_BASE_WIDTH = 375; // iPhone 6 width
+const REAL_WIDTH = height > width ? width : height;
 
 export const scaleFont = (fontSize) => {
   return {
-    fontSize: Math.round((fontSize * deviceHeight) / standardScreenHeight),
+    fontSize: Math.round((fontSize * REAL_WIDTH) / DEVICE_BASE_WIDTH),
   };
 };
 

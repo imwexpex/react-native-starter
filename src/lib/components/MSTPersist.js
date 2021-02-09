@@ -10,13 +10,19 @@ const MSTPersist = observer(({children}) => {
   const [rehydrated, setRehydrated] = useState(false);
 
   useEffect(() => {
-    persist('rootStore', rootStore, {
-      storage: AsyncStorage,
-      jsonify: true,
-      whitelist: ['user'],
-    }).then(() => {
-      setRehydrated(true);
-    });
+    const init = async () => {
+      try {
+        await persist('rootStore', rootStore, {
+          storage: AsyncStorage,
+          jsonify: true,
+          whitelist: ['user'],
+        });
+      } finally {
+        setRehydrated(true);
+      }
+    };
+
+    init();
   }, []);
 
   if (!rehydrated) {
