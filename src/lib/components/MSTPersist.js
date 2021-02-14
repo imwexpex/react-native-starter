@@ -3,10 +3,8 @@ import {observer} from 'mobx-react-lite';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
-
 import {useAsyncEffect} from '@lib/hooks/useAsyncEffect';
 import {rootStore} from '@lib/store/configureStore';
-
 import {persist} from '@utils/persist';
 
 const MSTPersist = observer(({children}) => {

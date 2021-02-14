@@ -1,7 +1,6 @@
 import {Methods} from '@api';
 import axios from 'axios';
 import {Platform} from 'react-native';
-
 import packageJson from '../../../../package.json';
 
 export const apiUrl = __DEV__ ? 'https://dev.url/' : 'https://prod.url/';

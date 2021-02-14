@@ -1,6 +1,5 @@
 import {apiCall, Endpoints, Methods} from '@api';
 import {types} from 'mobx-state-tree';
-
 import asyncAction from '@lib/store/helpers/asyncAction';
 
 export const ExampleState = {

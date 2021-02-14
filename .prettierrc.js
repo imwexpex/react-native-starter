@@ -12,5 +12,5 @@ module.exports = {
   singleQuote: true,
   trailingComma: 'all',
   importOrder: [...importOrder, '^[./]'],
-  importOrderSeparation: true,
+  importOrderSeparation: false,
 };
