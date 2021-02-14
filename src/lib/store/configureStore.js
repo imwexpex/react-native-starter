@@ -1,7 +1,8 @@
 import {types} from 'mobx-state-tree';
 import {createContext, useContext} from 'react';
-import Example, {ExampleState} from '@lib/store/ExampleStore';
 import {Platform} from 'react-native';
+
+import Example, {ExampleState} from '@lib/store/ExampleStore';
 
 const RootStore = types
   .model({

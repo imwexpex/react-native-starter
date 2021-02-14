@@ -1,29 +1,28 @@
-import {rootStore} from '@lib/store/configureStore';
-import {persist} from '@utils/persist';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {observer} from 'mobx-react-lite';
 import PropTypes from 'prop-types';
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+
+import {useAsyncEffect} from '@lib/hooks/useAsyncEffect';
+import {rootStore} from '@lib/store/configureStore';
+
+import {persist} from '@utils/persist';
 
 const MSTPersist = observer(({children}) => {
   const [rehydrated, setRehydrated] = useState(false);
 
-  useEffect(() => {
-    const init = async () => {
-      try {
-        await persist('rootStore', rootStore, {
-          storage: AsyncStorage,
-          jsonify: true,
-          whitelist: ['user'],
-        });
-      } finally {
-        setRehydrated(true);
-      }
-    };
-
-    init();
-  }, []);
+  useAsyncEffect(async () => {
+    try {
+      await persist('rootStore', rootStore, {
+        storage: AsyncStorage,
+        jsonify: true,
+        whitelist: ['user'],
+      });
+    } finally {
+      setRehydrated(true);
+    }
+  });
 
   if (!rehydrated) {
     return <View style={[styles.container]} />;

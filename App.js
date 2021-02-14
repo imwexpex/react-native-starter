@@ -1,24 +1,25 @@
-import MainNavigator from '@navigation/MainNavigator';
-import React, {useEffect} from 'react';
-import RNBootSplash from 'react-native-bootsplash';
-import {MSTProvider, rootStore} from '@lib/store/configureStore';
-import MSTPersist from '@components/MSTPersist';
-import {locale} from '@res/strings/locale';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import React from 'react';
+import RNBootSplash from 'react-native-bootsplash';
+
+import {useAsyncEffect} from '@lib/hooks/useAsyncEffect';
+import {MSTProvider, rootStore} from '@lib/store/configureStore';
+
+import MainNavigator from '@navigation/MainNavigator';
+
+import MSTPersist from '@components/MSTPersist';
+
+import {locale} from '@res/strings/locale';
 
 const App = () => {
-  useEffect(() => {
-    const init = async () => {
-      const language = await AsyncStorage.getItem('language');
-      if (language) {
-        locale.setLanguage(language);
-      }
+  useAsyncEffect(async () => {
+    const language = await AsyncStorage.getItem('language');
+    if (language) {
+      locale.setLanguage(language);
+    }
 
-      RNBootSplash.hide({fade: true});
-    };
-
-    init();
-  }, []);
+    await RNBootSplash.hide({fade: true});
+  });
 
   return (
     <MSTProvider value={rootStore}>

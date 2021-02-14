@@ -1,6 +1,5 @@
 import React, {memo} from 'react';
-import {View, StyleSheet} from 'react-native';
-import PropTypes from 'prop-types';
+import {StyleSheet, View} from 'react-native';
 
 const MainScreen = () => {
   return <View style={styles.container}></View>;

@@ -299,7 +299,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = (
 					"$(inherited)",
-					"-DFB_SONARKIT_ENABLED=1",
+					"-DFB_SONARKIT_ENABLED=0",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -327,7 +327,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = (
 					"$(inherited)",
-					"-DFB_SONARKIT_ENABLED=1",
+					"-DFB_SONARKIT_ENABLED=0",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",

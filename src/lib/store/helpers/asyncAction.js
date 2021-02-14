@@ -1,4 +1,5 @@
 import {getParent, getRoot, types} from 'mobx-state-tree';
+
 import {asyncModel} from '../models/asyncModel';
 
 export function asyncAction(thunk, auto = true, throwable = true) {
