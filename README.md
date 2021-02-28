@@ -1,4 +1,4 @@
-## react-native-starter it's report for bootstrapping RN projects
+## react-native-starter it's a repository for bootstrapping RN projects
 
 **Current list of used libs:** 
  * [MobX State Tree](https://mobx-state-tree.js.org/) (Persist + Async Actions model/util)
