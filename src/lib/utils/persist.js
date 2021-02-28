@@ -120,21 +120,20 @@ var persist = function persist(name, store, options) {
     if (Object.keys(snapshot).length) {
       var data = !jsonify ? snapshot : JSON.stringify(snapshot);
 
-      storage.setItem(name, data);
+      storage.set(name, data);
     }
   });
-  return storage.getItem(name).then(function (data) {
-    var snapshot = !isString(data) ? data : JSON.parse(data); // don't apply falsey (which will error), leave store in initial state
 
-    if (!snapshot) {
-      return;
-    }
+  const storageData = storage.getString(name);
+
+  if (storageData) {
+    const snapshot = JSON.parse(storageData);
 
     mobxStateTree.applySnapshot(store, {
       ...mobxStateTree.getSnapshot(store),
       ...snapshot,
     });
-  });
+  }
 };
 
 function arrToDict(arr) {

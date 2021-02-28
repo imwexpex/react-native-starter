@@ -1,8 +1,8 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import {observer} from 'mobx-react-lite';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
+import {MMKV} from 'react-native-mmkv';
 import {useAsyncEffect} from '@lib/hooks/useAsyncEffect';
 import {rootStore} from '@lib/store/configureStore';
 import {persist} from '@utils/persist';
@@ -13,9 +13,9 @@ const MSTPersist = observer(({children}) => {
   useAsyncEffect(async () => {
     try {
       await persist('rootStore', rootStore, {
-        storage: AsyncStorage,
+        storage: MMKV,
         jsonify: true,
-        whitelist: ['user'],
+        whitelist: ['example'],
       });
     } finally {
       setRehydrated(true);
