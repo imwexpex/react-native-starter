@@ -20,7 +20,7 @@ const MSTPersist = observer(({children}) => {
     } finally {
       setRehydrated(true);
     }
-  });
+  }, []);
 
   if (!rehydrated) {
     return <View style={[styles.container]} />;

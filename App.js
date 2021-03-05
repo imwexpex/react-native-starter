@@ -16,7 +16,7 @@ const App = () => {
     }
 
     await RNBootSplash.hide({fade: true});
-  });
+  }, []);
 
   return (
     <MSTProvider value={rootStore}>
