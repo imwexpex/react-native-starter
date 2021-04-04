@@ -27,7 +27,7 @@ export const asyncModel = types
     requestSource: null,
   }))
 
-  .views((store) => ({
+  .views(store => ({
     get errorMessage() {
       return store?.error?.message ?? null;
     },
@@ -52,7 +52,7 @@ export const asyncModel = types
       return store.inProgress && !store.hasEverBeenRun;
     },
   }))
-  .actions((store) => ({
+  .actions(store => ({
     setRequestSource(source) {
       if (source === null) {
         store.requestSource = null;

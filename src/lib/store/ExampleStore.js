@@ -1,6 +1,6 @@
 import {apiCall, Endpoints, Methods} from '@api';
-import {types} from 'mobx-state-tree';
 import asyncAction from '@lib/store/helpers/asyncAction';
+import {types} from 'mobx-state-tree';
 
 export const ExampleState = {
   data: null,
@@ -26,7 +26,7 @@ const Place = types
     data: types.maybe(types.frozen()),
     getData: asyncAction(getData),
   })
-  .actions((store) => ({
+  .actions(store => ({
     setData(data) {
       store.data = data;
     },

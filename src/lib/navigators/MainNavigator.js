@@ -1,10 +1,10 @@
+import {NavigationRoutes} from '@navigation/NavigationRoutes';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
-import React from 'react';
 import MainScreen from '@screens/MainScreen';
-import colors from '@theme/colors';
-import {NavigationRoutes} from '@navigation/NavigationRoutes';
 import {navigationRef} from '@services/navigationService';
+import colors from '@theme/colors';
+import React from 'react';
 
 const Stack = createStackNavigator();
 

@@ -4,7 +4,7 @@ import {asyncModel} from '../models/asyncModel';
 export function asyncAction(thunk, auto = true, throwable = true) {
   const flowModel = types.compose(
     asyncModel,
-    types.model({}).actions((store) => ({
+    types.model({}).actions(store => ({
       async auto(promise) {
         try {
           store.start();
@@ -36,7 +36,7 @@ export function asyncAction(thunk, auto = true, throwable = true) {
 export function returningAsyncAction(thunk) {
   const flowModel = types.compose(
     asyncModel,
-    types.model({}).actions((store) => ({
+    types.model({}).actions(store => ({
       async auto(promise) {
         try {
           store.start();
@@ -68,7 +68,7 @@ export function returningAsyncAction(thunk) {
 export function checkingAsyncAction(checkingThunk) {
   const flowModel = types.compose(
     asyncModel,
-    types.model({}).actions((store) => ({
+    types.model({}).actions(store => ({
       async auto(promise) {
         try {
           store.start();

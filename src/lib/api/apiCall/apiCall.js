@@ -1,4 +1,4 @@
-import {Endpoints, Methods} from '@api';
+import {Methods} from '@api';
 import axios from 'axios';
 import {Platform} from 'react-native';
 import packageJson from '../../../../package.json';
@@ -53,7 +53,7 @@ function subscribeTokenRefresh(cb) {
 }
 
 function onRefreshed(token) {
-  refreshSubscribers.map((cb) => cb(token));
+  refreshSubscribers.map(cb => cb(token));
 }
 
 function requestRefreshToken() {
@@ -67,8 +67,8 @@ function requestRefreshToken() {
 }
 
 instance.interceptors.response.use(
-  (r) => r,
-  (error) => {
+  r => r,
+  error => {
     const {
       config: originalRequest,
       response: {status},
@@ -87,8 +87,8 @@ instance.interceptors.response.use(
         });
       }
 
-      return new Promise((resolve) => {
-        subscribeTokenRefresh((token) => {
+      return new Promise(resolve => {
+        subscribeTokenRefresh(token => {
           originalRequest.headers.Authorization = token;
           resolve(axios({...originalRequest}));
         });
@@ -100,8 +100,8 @@ instance.interceptors.response.use(
 );
 
 refreshInstance.interceptors.response.use(
-  (r) => r,
-  (error) => {
+  r => r,
+  error => {
     //PERFORM LOGOUT USER LOGIC HERE
 
     return Promise.reject(error);

@@ -5,7 +5,7 @@ const {width, height} = Dimensions.get('window');
 const DEVICE_BASE_WIDTH = 375; // iPhone 6 width
 const REAL_WIDTH = height > width ? width : height;
 
-export const scaleFont = (fontSize) => {
+export const scaleFont = fontSize => {
   return {
     fontSize: Math.round((fontSize * REAL_WIDTH) / DEVICE_BASE_WIDTH),
   };
