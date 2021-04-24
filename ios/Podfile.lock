@@ -294,7 +294,7 @@ PODS:
     - React-perflogger (= 0.64.0)
   - ReactNativeLocalization (2.1.6):
     - React
-  - RNBootSplash (3.2.0):
+  - RNBootSplash (3.2.1):
     - React-Core
   - RNCMaskedView (0.1.10):
     - React
@@ -329,7 +329,7 @@ PODS:
     - React-RCTVibration
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNScreens (3.0.0):
+  - RNScreens (3.1.1):
     - React-Core
   - Yoga (1.14.0)
 
@@ -494,11 +494,11 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: cad74a1eaa53ee6e7a3620231939d8fe2c6afcf0
   ReactCommon: cfe2b7fd20e0dbd2d1185cd7d8f99633fbc5ff05
   ReactNativeLocalization: dbb269b27d8a84bb22b9c2cdec38ba780b51dd72
-  RNBootSplash: 24175aa28fe203b10c48dc34e78d946fd33c77af
+  RNBootSplash: a7750857d7c7c51fb37ba453cd506b5950e62f74
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
   RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
   RNReanimated: b8c8004b43446e3c2709fe64b2b41072f87428ad
-  RNScreens: e8e8dd0588b5da0ab57dcca76ab9b2d8987757e0
+  RNScreens: bd1523c3bde7069b8e958e5a16e1fc7722ad0bdd
   Yoga: 8c8436d4171c87504c648ae23b1d81242bdf3bbf
 
 PODFILE CHECKSUM: c6c354dc04f5ba126dcd944c151d8442133f73f4
