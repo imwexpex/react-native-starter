@@ -5,7 +5,6 @@ import {observer} from 'mobx-react-lite';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {MMKV} from 'react-native-mmkv';
 
 const MSTPersist = observer(({children}) => {
   const [rehydrated, setRehydrated] = useState(false);
@@ -13,7 +12,6 @@ const MSTPersist = observer(({children}) => {
   useAsyncEffect(async () => {
     try {
       await persist('rootStore', rootStore, {
-        storage: MMKV,
         jsonify: true,
         whitelist: ['example'],
       });

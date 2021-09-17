@@ -1,6 +1,6 @@
+import {storage} from '@utils/persist';
 import React from 'react';
 import RNBootSplash from 'react-native-bootsplash';
-import {MMKV} from 'react-native-mmkv';
 import {useAsyncEffect} from '@lib/hooks/useAsyncEffect';
 import {MSTProvider, rootStore} from '@lib/store/configureStore';
 import MainNavigator from '@navigation/MainNavigator';
@@ -9,7 +9,7 @@ import {locale} from '@res/strings/locale';
 
 const App = () => {
   useAsyncEffect(async () => {
-    const language = MMKV.getString('language');
+    const language = storage.getString('language');
 
     if (language) {
       locale.setLanguage(language);
