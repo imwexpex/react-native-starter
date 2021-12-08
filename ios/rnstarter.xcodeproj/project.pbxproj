@@ -14,6 +14,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		B33E3F38D43157B39A70B18D /* libPods-rnstarter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C325DD3A779CF67503DC25D2 /* libPods-rnstarter.a */; };
 		BD8663010ED3AF897F33AF73 /* libPods-rnstarter-rnstarterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C035D0179C456EE7B4E15DAA /* libPods-rnstarter-rnstarterTests.a */; };
+		FF38E0742760CE3A009A352C /* void.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38E0732760CE3A009A352C /* void.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		C325DD3A779CF67503DC25D2 /* libPods-rnstarter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rnstarter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F1BFAA08D4CACE71859D2636 /* Pods-rnstarter-rnstarterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnstarter-rnstarterTests.release.xcconfig"; path = "Target Support Files/Pods-rnstarter-rnstarterTests/Pods-rnstarter-rnstarterTests.release.xcconfig"; sourceTree = "<group>"; };
+		FF38E0722760CE3A009A352C /* rnstarter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rnstarter-Bridging-Header.h"; sourceTree = "<group>"; };
+		FF38E0732760CE3A009A352C /* void.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = void.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				FF38E0732760CE3A009A352C /* void.swift */,
+				FF38E0722760CE3A009A352C /* rnstarter-Bridging-Header.h */,
 			);
 			name = rnstarter;
 			sourceTree = "<group>";
@@ -114,7 +119,6 @@
 				73D00E79568E646EA75EE4A1 /* Pods-rnstarter-rnstarterTests.debug.xcconfig */,
 				F1BFAA08D4CACE71859D2636 /* Pods-rnstarter-rnstarterTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +212,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1310;
 					};
 				};
 			};
@@ -413,6 +417,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				FF38E0742760CE3A009A352C /* void.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 73D00E79568E646EA75EE4A1 /* Pods-rnstarter-rnstarterTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -458,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F1BFAA08D4CACE71859D2636 /* Pods-rnstarter-rnstarterTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = rnstarterTests/Info.plist;
@@ -498,6 +505,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = rnstarter;
+				SWIFT_OBJC_BRIDGING_HEADER = "rnstarter-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -523,6 +531,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = rnstarter;
+				SWIFT_OBJC_BRIDGING_HEADER = "rnstarter-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
